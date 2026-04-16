@@ -10,6 +10,7 @@ export default defineConfig({
     babel({ presets: [reactCompilerPreset()] }),
 
   ],
+  base:'/React-Profile/',
   build: {
     outDir: "dist",
     assetsDir: "assets",
