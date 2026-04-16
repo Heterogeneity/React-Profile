@@ -19,8 +19,7 @@ export const Header = (): ReactNode => {
     }
 
     const scrollToSection = (href: string) => {
-        if (href === '' || href === "experience") {
-
+        if (href === '/' || href === "/experience") {
             navigate(href)
             return
         }
@@ -55,7 +54,7 @@ export const Header = (): ReactNode => {
 
                 <div className="hidden md:flex space-x-8 items-center">
                     {navItems.map(item => (
-                        <a className={`transition-colors font-semibold hover:text-black ${location.pathname === '/' && item.href === '' ? 'hidden' : ''} ${isScrolled ? 'text-gray-600 dark:text-white' : 'text-gray-700 dark:text-white'}`} href={item.href} key={item.href} onClick={e => {
+                        <a className={`transition-colors font-semibold hover:text-black ${location.pathname === '/' && item.href === '/' ? 'hidden' : ''} ${isScrolled ? 'text-gray-600 dark:text-white' : 'text-gray-700 dark:text-white'}`} href={item.href} key={item.href} onClick={e => {
                             e.preventDefault()
                             scrollToSection(item.href)
                         }}>{item.label}</a>
@@ -76,7 +75,7 @@ export const Header = (): ReactNode => {
             <div className={`md:hidden transition-all duration-300 ease-in-out ${isMobileMenuOpen ? 'max-h-65 opacity-100 mt-4' : 'max-h-0 opacity-0 overflow-hidden'}`}>
                 <div className="bg-white dark:bg-gray-800 border border-gray-100 rounded-lg shadow-lg p-4 space-y-4">
                     {navItems.map(item => (
-                        <a className={`block text-gray-600 hover:text-black dark:text-white transition-colors py-2 ${location.pathname === '/' && item.href === '' ? 'hidden' : ''}`} href={item.href} key={item.href} onClick={e => {
+                        <a className={`block text-gray-600 hover:text-black dark:text-white transition-colors py-2 ${location.pathname === '/' && item.href === '/' ? 'hidden' : ''}`} href={item.href} key={item.href} onClick={e => {
                             e.preventDefault()
                             scrollToSection(item.href)
                         }}>{item.label}</a>

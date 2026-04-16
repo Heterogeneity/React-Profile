@@ -93,10 +93,10 @@ export const contactLinks = [
 
 
 export const navItems = [
-    { href: '', label: '首页' },
+    { href: '/', label: '首页' },
     { href: '#about', label: '关于我' },
     { href: '#projects', label: '练手项目' },
     { href: '#skills', label: '技术栈' },
     { href: '#contact', label: '联系' },
-    { href: 'experience', label: '工作经历' },
+    { href: '/experience', label: '工作经历' },
 ]
