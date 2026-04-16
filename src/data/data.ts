@@ -43,7 +43,7 @@ export const data = {
 
 export const projects = [
     {
-        img: "./src/assets/Nihilism 1.0.png",
+        img: "Nihilism-1.0.png",
         title: "Nihilism Blog 1.0(已完成)",
         description: "我的个人博客网站1.0(API三层架构)",
         tech: ["Gin", "Vue3", "Redis", "ElasticSearch", "MySQL"],

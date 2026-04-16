@@ -2,7 +2,7 @@ import './App.css'
 
 import { Footer } from './components/Footer';
 import { Header } from './components/Header';
-import { RouterProvider } from 'react-router';
+import { RouterProvider } from 'react-router-dom';
 import { router } from './router/index'
 
 function App() {
