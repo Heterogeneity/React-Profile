@@ -7,23 +7,31 @@ export default defineConfig({
   plugins: [
     react(),
     tailwindcss(),
-    babel({ presets: [reactCompilerPreset()] })
+    babel({ presets: [reactCompilerPreset()] }),
+
   ],
-  build:{
-    outDir:"dist",
-    assetsDir:"assets",
-    sourcemap:false,
-    minify:"terser",
-    rolldownOptions:{
-      output:{
-        manualChunks:{
-          vendor:["react","react-dom"],
-          icons:["lucide-react"]
+  build: {
+    outDir: "dist",
+    assetsDir: "assets",
+    sourcemap: false,
+    minify: "terser",
+    rolldownOptions: {
+      output: {
+        manualChunks(id: string) {
+          if (id.includes('node_modules')) {
+            if (id.includes('react') || id.includes('react-dom')) {
+              return 'vendor';
+            }
+            if (id.includes('@ant-design/icons')) {
+              return 'icons';
+            }
+            return 'vendor';
+          }
         }
       }
     }
   },
-  preview:{
+  preview: {
     port: 3000,
     open: true
   }
