@@ -61,7 +61,13 @@ export const projects = [
 ]
 
 export const skills = [
-    { category: "前端(擅长)", item: ["Vue2/3", "React", "Next.js"] },
+    {   category: 
+        "前端(擅长)", 
+        item: [
+        "Vue2/3", 
+        "React", 
+        "Next.js"
+    ] },
     { category: "后端(一般)", item: ["Go(Gin & Fiber)", "Node.js(Express)", "Python(爬虫)", "PHP(ThinkPHP)"] },
     { category: "数据库(一般)", item: ["Redis", "MySQL", "PostgreSQL", "ElasticSearch"] },
     { category: "工具(擅长)", item: ["Linux", "Git", "Nginx", "Docker"] }
@@ -87,8 +93,10 @@ export const contactLinks = [
 
 
 export const navItems = [
+    { href: '', label: '首页' },
     { href: '#about', label: '关于我' },
     { href: '#projects', label: '练手项目' },
     { href: '#skills', label: '技术栈' },
-    { href: '#contact', label: '联系' }
+    { href: '#contact', label: '联系' },
+    { href: 'experience', label: '工作经历' },
 ]

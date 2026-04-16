@@ -2,10 +2,10 @@ import { Mail, Link, Gamepad, FileArchive, Baby, Code2Icon } from "lucide-react"
 import type { ReactNode } from "react"
 
 interface Props {
-    hasAnimated: any
+    hasAnimated?: any
 }
 
-export const About: React.FC<Props> = (props): ReactNode => {
+export const About: React.FC<Props> = ({ hasAnimated = false }): ReactNode => {
     const feature = [
         {
             icon: <Code2Icon className="w-8 h-8 mb-4 text-black dark:text-white" />,
@@ -31,7 +31,7 @@ export const About: React.FC<Props> = (props): ReactNode => {
     return (
         <section id="about" className="py-16 px-6 bg-gray-50 dark:bg-gray-600">
             <div className="max-w-6xl mx-auto">
-                <div className={`transition-all duration-1000 delay-200 ${props.hasAnimated.about ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+                <div className={`transition-all duration-1000 delay-200 ${hasAnimated.about ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
                     <h2 className="text-4xl font-bold mb-12 text-center">关于我的情况</h2>
                     <div className="grid md:grid-cols-2 gap-12 items-center">
                         <div>

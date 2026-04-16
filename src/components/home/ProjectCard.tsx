@@ -35,8 +35,8 @@ export const ProjectCard: React.FC<Props> = (props): ReactNode => {
             <div className="
             h-48 
             bg-linear-to-br 
-            from-gray-100
-            to-gray-200
+            from-gray-100 dark:from-gray-400
+            to-gray-200 dark:to-gray-800
             flex
             items-center
             justify-center
@@ -46,7 +46,7 @@ export const ProjectCard: React.FC<Props> = (props): ReactNode => {
                 font-bold
                 text-gray-300
                 ">
-                    {props.val.img !== "" ? <img src={props.val.img} alt={props.val.title} /> : props.val.title.charAt(0)}
+                    {props.val.img !== "" ? <img className="h-48  bg-cover" src={props.val.img} alt={props.val.title} /> : "开发中"}
                 </div>
             </div>
             <div className="p-6 flex flex-col grow">
@@ -66,9 +66,9 @@ export const ProjectCard: React.FC<Props> = (props): ReactNode => {
                         <span key={idx} className="
                         px-3
                         py-1
-                        bg-gray-100
-                        text-gray-700
-                        rounded-full
+                        bg-gray-100 dark:bg-black
+                        text-gray-700 dark:text-gray-50
+                        rounded-xl
                         text-xs
                         ">
                             {val}

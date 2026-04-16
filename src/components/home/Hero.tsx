@@ -1,6 +1,6 @@
 import { useEffect, useState, type ReactNode } from "react"
 import { data } from "../../data/data"
-import { Aperture, ArrowDown, Link, Mail } from "lucide-react"
+import { ArrowDown, GitBranchIcon, Mail, Tent } from "lucide-react"
 
 interface Props {
     hasAnimated: any
@@ -111,7 +111,7 @@ export const Hero: React.FC<Props> = (props): ReactNode => {
 
                     <div className="flex justify-center space-x-6 mb-8 animate-fade-in-up delay-400">
                         {data.socialLinks.map((val, idx) => {
-                            const IconComponent = val.icon === 'Aperture' ? Aperture : val.icon === 'Link' ? Link : Mail
+                            const IconComponent = val.icon === 'Aperture' ? GitBranchIcon : val.icon === 'Link' ? Tent : Mail
                             return (
                                 <a href={val.url} key={idx} className="group p-3 bg-white dark:bg-gray-800 rounded-full shadow-md hover:shadow-lg transition-all duration-300 transform hover:scale-110 hover:-translate-y-1">
                                     <IconComponent className="w-6 h-6 text-gray-700 dark:text-white transition-colors"></IconComponent>

@@ -1,8 +1,10 @@
 import type { ReactNode } from "react";
 
 export const ErrorPage = (): ReactNode => {
-    return 
-    <>
-    404
-    </>
+    return(
+        <div>
+            404待开发
+        </div>
+    )
+   
 }
