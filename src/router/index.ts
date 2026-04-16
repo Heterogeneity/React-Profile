@@ -14,4 +14,6 @@ export const router = createBrowserRouter([
         path: "*",
         Component: ErrorPage
     }
-])
+], {
+    basename: "/React-Profile"   // 关键：与 GitHub Pages 子路径一致
+})
