@@ -13,15 +13,15 @@ export const router = createBrowserRouter([
                 Component: HomePage,
             },
             {
-                path: "/*",
-                Component: ErrorPage
-            },
-            {
                 path: "/experience",
                 Component: ExperiencePage
+            },
+            {
+                path: "/*",
+                Component: ErrorPage
             }
         ]
     }
 ], {
-    basename: "/React-Profile"   // 关键：与 GitHub Pages 子路径一致
+    basename: "/React-Profile/"   // 关键：与 GitHub Pages 子路径一致
 })
