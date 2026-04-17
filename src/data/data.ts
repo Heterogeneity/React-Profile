@@ -2,9 +2,9 @@ export const data = {
     greeting: "🥰 你好，我是",
     name: "Nihilism",
     roles: [
-        "无业游民",
+        "灵活就业人员",
     ],
-    description: "Time and tide wait for no man.",
+    description: "这是一个静态挂载的个人介绍页，感谢你的访问。",
     stats: [
         { number: "2+", label: "项目经验年" },
         { number: "10+", label: "项目数量" },

@@ -9,7 +9,7 @@ export const Footer = (): ReactNode => {
             <ScrollToTop show={showScrollTop} />
             <div className="max-w-6xl mx-auto text-center">
                 <p className="text-gray-600 dark:text-white">
-                    © 2026 Nihilism. 搭建工具 React && Tailwind CSS.
+                    © 2026 Nihilism. 搭建工具 React && Tailwind.
                 </p>
             </div>
         </footer>
