@@ -10,7 +10,7 @@ export default defineConfig({
     babel({ presets: [reactCompilerPreset()] }),
 
   ],
-  base:'/React-Profile/',
+  base: '/React-Profile/',
   build: {
     outDir: "dist",
     assetsDir: "assets",
@@ -35,5 +35,15 @@ export default defineConfig({
   preview: {
     port: 3000,
     open: true
+  },
+  server: {
+    port: 4300,
+    host: '0.0.0.0',
+    open: true,
+    proxy: {
+      '/api': {
+
+      }
+    }
   }
 })
